@@ -4,7 +4,8 @@ PC
 
 
 SP
-![Uploading screencapture-localhost-3000-2021-11-15-09_35_03.png…]()
+![screencapture-localhost-3000-2021-11-15-09_38_40](https://user-images.githubusercontent.com/76928095/141705759-7bfef5a3-9bab-427b-902b-9f627490b5e0.png)
+
 
 ## 使用した技術
 - scss / gulp / git
