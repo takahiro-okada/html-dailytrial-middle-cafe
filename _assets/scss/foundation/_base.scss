@@ -1,0 +1,16 @@
+@use '../global/' as g;
+
+html {
+  font-size: 62.5%;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  html {
+    font-size: 0.625vw;
+  }
+}
+body{
+  font-size: g.rem(16);
+  font-family: g.$font-default;
+  line-height: 1.6;
+}

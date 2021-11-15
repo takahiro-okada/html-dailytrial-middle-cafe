@@ -1,0 +1,60 @@
+@use '../global/' as g;
+
+.p-heading {
+  background-color: g.$body-color;
+  position: relative;
+  overflow: hidden;
+  &:before {
+    font-size: g.rem(110);
+    position: absolute;
+    content: "Garden Salad";
+    line-height: 0.8;
+    font-family: g.$font-en;
+    color: #676767;
+    opacity: 0.3;
+    bottom: g.rem(-10);
+    right: g.rem(10);
+    text-align: right;
+    @include g.mq('lg'){
+      text-align: left;
+      left: g.rem(-50);
+      bottom: 0;
+      font-size: g.rem(280);
+      white-space: nowrap;
+    }
+  }
+}
+.p-heading__inner {
+  position: relative;
+  padding: g.rem(50) 0 g.rem(60);
+  margin: 0 auto;
+  width: 80%;
+  @include g.mq("lg") {
+    padding: g.rem(120) 0 g.rem(107);
+  }
+}
+.p-heading__title {
+  font-size: g.rem(20);
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  color: #fff;
+  text-align: center;
+  margin-left: g.rem(15);
+  @include g.mq("lg") {
+    letter-spacing: 0;
+    margin-left: 0;
+    font-size: g.rem(32);
+  }
+}
+.p-heading__text {
+  color: #fff;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  text-align: center;
+  margin-top: g.rem(20);
+  letter-spacing: 0.03em;
+  @include g.mq("lg") {
+    font-size: g.rem(18);
+    margin-top: g.rem(48);
+  }
+}

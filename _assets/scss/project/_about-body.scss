@@ -1,0 +1,139 @@
+@use '../global/' as g;
+
+.p-about-body {
+  position: relative;
+  @include g.mq("lg") {
+    margin-top: g.rem(-15);
+  }
+}
+.p-about__contents {
+  margin-top: g.rem(72);
+  @include g.mq("lg") {
+    margin-top: g.rem(104);
+  }
+}
+.p-about-body__title {
+  position: relative;
+  font-size: g.rem(24);
+  white-space: nowrap;
+  font-weight: bold;
+  margin-left: g.rem(9);
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  @include g.mq("lg") {
+    margin-left: 0;
+    font-size: g.rem(30);
+  }
+}
+.p-about-body__text {
+  position: relative;
+  margin-top: g.rem(13);
+  margin-left: g.rem(9);
+  letter-spacing: 0.03em;
+  @include g.mq("lg") {
+    margin-top: g.rem(24);
+    margin-left: 0;
+    max-width: g.rem(400);
+    line-height: 1.5;
+    font-size: g.rem(18);
+  }
+}
+.p-about__image {
+  margin-top: g.rem(32);
+  @include g.mq("lg") {
+    width: 41.6667%;
+    margin-top: 0;
+  }
+}
+.p-about__item {
+  &:not(:first-child) {
+    margin-top: g.rem(53);
+  }
+  &:nth-child(odd) {
+    @include g.mq("lg") {
+      flex-direction: row-reverse;
+    }
+  }
+  @include g.mq("lg") {
+    &:not(:first-child) {
+      margin-top: g.rem(63);
+    }
+    margin-top: g.rem(63);
+    display: flex;
+    align-items: center;
+    &:nth-child(odd) {
+      justify-content: flex-end;
+    }
+    &:nth-child(even) {
+      justify-content: space-between;
+    }
+  }
+}
+.p-about__item:last-child {
+  .p-about__image {
+    margin-top: g.rem(48);
+    @include g.mq("lg") {
+      margin-top: 0;
+    }
+  }
+}
+// PC時のコンテンツ間の余白
+.p-about__item {
+  @include g.mq("lg") {
+    &:nth-child(odd) {
+      .p-about__body {
+        margin-left: g.rem(67);
+      }
+    }
+    &:nth-child(even) {
+      .p-about__body {
+        margin-right: g.rem(30);
+      }
+    }
+  }
+}
+// 背景の数字
+.p-about__item {
+  .p-about__body {
+    &::before {
+      font-family: g.$font-en;
+      color: #fff;
+      position: absolute;
+      display: inline-block;
+      bottom: 0;
+      right: 0;
+      font-size: g.rem(180);
+      line-height: 1;
+      transform: translate(15px, 53px);
+      @include g.mq('lg'){
+        font-size: g.rem(288);
+        top: 50%;
+        bottom: auto;
+        right: -30%;
+        transform: translate(0, -50%);
+      }
+
+    }
+  }
+  &:nth-child(1) {
+    .p-about-body {
+      &::before {
+        content: "01";
+      }
+    }
+  }
+  &:nth-child(2) {
+    .p-about-body {
+      &::before {
+        content: "02";
+      }
+    }
+  }
+  &:nth-child(3) {
+    .p-about-body {
+      &::before {
+        content: "03";
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@use '../global/' as g;
+
+.p-feature {
+  background: url(../images/index-feature_01_sp.jpg) no-repeat center center;
+  height: 250px;
+  background-size: cover;
+  @include g.mq("lg") {
+    height: g.rem(450);
+    background: url(../images/index-feature_01.jpg) no-repeat center center;
+    background-size: cover;
+  }
+}

@@ -1,0 +1,25 @@
+@use '../global/' as g;
+
+.p-shop{
+  margin: g.rem(64) 0 0;
+  @include g.mq('lg'){
+    margin: g.rem(124) 0 0;
+  }
+}
+.p-shop__map{
+  position: relative;
+  height: 0;
+  padding-top: 66.4%;
+  margin-top: g.rem(70);
+  iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  @include g.mq('lg'){
+    padding-top: 32.4%;
+  margin-top: g.rem(100);
+  }
+}

@@ -1,0 +1,12 @@
+@use "./variables" as var;
+
+// メディアクエリー
+@mixin mq($breakpoint: lg) {
+	@media #{map-get(var.$breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+
+@function rem($pxcel) {
+  @return $pxcel * 0.1rem;
+}

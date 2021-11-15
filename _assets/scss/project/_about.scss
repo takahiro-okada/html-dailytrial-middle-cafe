@@ -1,0 +1,22 @@
+@use '../global/' as g;
+
+.p-about{
+  background: #F2F2F2;
+  padding: g.rem(64) 0;
+  @include g.mq('lg'){
+    padding: g.rem(130) 0 g.rem(150);
+  }
+}
+.p-about__body{
+  @include g.mq('lg'){
+    &:nth-child(1){
+      margin-top: g.rem(10);
+    }
+    &:nth-child(2){
+
+    }
+    &:nth-child(3){
+
+    }
+  }
+}

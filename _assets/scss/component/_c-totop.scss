@@ -1,0 +1,15 @@
+@use '../global/' as g;
+
+.c-totop{
+  display: none;
+  position:fixed;
+  right:3%;
+  bottom:3%;
+  color:#fff;
+  padding:2rem;
+  border-radius:50%;
+  display:inline-block;
+  text-decoration:none;
+  width: g.rem(160);
+  height: g.rem(160);
+}

@@ -1,0 +1,108 @@
+@use '../global/' as g;
+.contact__modal {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 100%;
+	padding: g.rem(60) g.rem(30) g.rem(20);
+	z-index: 1;
+	background: #fff;
+	display: none;
+  width: 90%;
+	@include g.mq("lg") {
+	}
+	&.is-show {
+		display: block;
+	}
+}
+
+.contact__modal-close-icon {
+	text-align: center;
+	position: absolute;
+	right: g.rem(10);
+	top: g.rem(10);
+	cursor: pointer;
+
+	img {
+		width: 43px;
+	}
+}
+
+.contact__modal-title {
+	font-size: 24px;
+	font-weight: 700;
+	text-align: center;
+	padding-bottom: 24px;
+	position: relative;
+	color: #707070;
+
+	&::after {
+		content: "";
+		width: 155px;
+		height: 2px;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+.contact__modal-content {
+	overflow: auto;
+	margin-top: 42px;
+	> :first-child {
+		margin-top: 0;
+	}
+}
+
+.contact__modal-head {
+	font-size: 20px;
+	padding: 0 0 0 28px;
+	color: #707070;
+	position: relative;
+	font-weight: 700;
+	margin-top: 52px;
+	&::before {
+		content: "";
+		position: absolute;
+		height: 18px;
+		width: 3px;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 0;
+	}
+}
+
+.contact__modal-text {
+	padding: 0 0 0 28px;
+	margin-top: 8px;
+	color: #707070;
+	line-height: (26 / 16);
+}
+
+.contact__modal-close-button {
+	text-align: center;
+	margin-top: 24px;
+}
+
+.contact__modal-background {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background: #000;
+	opacity: 0.3;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	display: none;
+
+	&.is-show {
+		display: block;
+	}
+}
+.button-modal{
+  background-color: g.$font-color;
+  color: #fff;
+  padding: g.rem(10) g.rem(20);
+}

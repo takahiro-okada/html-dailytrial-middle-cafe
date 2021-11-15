@@ -1,0 +1,37 @@
+@use '../global/' as *;
+
+.p-menu {
+  background-color: $body-color;
+  padding: rem(24) 0 rem(24);
+  @include mq("lg") {
+    padding: rem(74) 0 rem(75);
+  }
+}
+.p-menu__inner {
+  box-sizing: border-box;
+  padding: 0;
+  max-width: 100%;
+  margin: 0 rem(16);
+  @include mq("lg") {
+    width: rem(1300);
+    margin: auto;
+  }
+}
+.p-menu__inner-line {
+  border: 1px solid #fff;
+  padding: rem(28) rem(10);
+  @include mq("lg") {
+    padding: rem(80) rem(10) rem(97);
+  }
+}
+.p-menu__desc {
+  color: #fff;
+  text-align: center;
+  margin-top: rem(64);
+  letter-spacing: 0.03em;
+}
+.p-menu__list {
+  margin-top: rem(48);
+  @include mq("lg") {
+  }
+}

@@ -1,0 +1,65 @@
+@use '../global/' as g;
+
+.l-footer {
+  padding: g.rem(48) 0 g.rem(10);
+  background-color: g.$main-color;
+  @include g.mq("lg") {
+    padding: g.rem(56) 0 g.rem(9);
+  }
+}
+.l-footer__inner {
+  margin: auto;
+}
+.l-footer__sns {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.l-footer__icon {
+  i {
+    color: #fff;
+    padding: g.rem(12);
+    background-color: g.$body-color;
+    border-radius: 50%;
+    font-size: g.rem(24);
+  }
+}
+.l-footer__nav {
+  margin-top: g.rem(40);
+}
+.l-footer__list {
+  display: flex;
+  justify-content: center;
+  gap: g.rem(32);
+}
+.l-footer__item {
+}
+.l-footer__link {
+  font-family: g.$font-en;
+  letter-spacing: 0.03em;
+  font-size: g.rem(16);
+  @include g.mq("lg") {
+    font-size: g.rem(18);
+  }
+  &:hover {
+    text-decoration: underline;
+    text-decoration-thickness:2px;
+    text-underline-offset: g.rem(3);
+    text-decoration-color: g.$primary-color;
+  }
+}
+.l-footer__logo {
+  margin: g.rem(34) auto 0;
+  width: g.rem(166);
+  @include g.mq("lg") {
+    margin: g.rem(36) auto 0;
+  }
+}
+.l-footer__policy {
+  text-align: center;
+  margin-top: g.rem(30);
+  font-size: g.rem(12);
+  @include g.mq("lg") {
+    margin-top: g.rem(7);
+  }
+}

@@ -1,0 +1,125 @@
+@use '../global/' as g;
+
+.p-instagram {
+  margin-top: g.rem(60);
+}
+.p-instagram__content {
+  background-color: #fff;
+  margin: 0 auto;
+  padding: g.rem(10);
+  position: relative;
+  width: 92%;
+  @include g.mq("lg") {
+    width: 85%;
+  }
+}
+.p-instagram__wrap {
+  padding: g.rem(63) g.rem(10) g.rem(20);
+  @include g.mq("lg") {
+    padding: g.rem(63) g.rem(48) g.rem(25);
+    border: 1px solid g.$font-color;
+    overflow: hidden;
+  }
+}
+.p-instagram__label {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: g.$primary-color;
+  color: #fff;
+  font-size: g.rem(24);
+  font-family: g.$font-en;
+  padding: g.rem(10) g.rem(34);
+  @include g.mq("lg") {
+    font-size: g.rem(30);
+    padding: g.rem(16) g.rem(120);
+  }
+}
+.p-instagram__desc {
+  letter-spacing: 0.05em;
+  width: 93%;
+  margin: auto;
+  @include g.mq("lg") {
+    width: 100%;
+    margin-top: g.rem(35);
+    font-size: g.rem(18);
+    text-align: center;
+    position: relative;
+    &::before,&::after{
+      position: relative;
+      display: inline-block;
+      content: "";
+      background: g.$font-color;//斜め線の色
+      width: 2px;//斜め線の太さ
+      height: 2em;//斜め線の長さ
+      margin: 0 1em;//テキストとの間に左右余白をつくる
+      margin-top: -.2em;//斜め線の位置調整
+      vertical-align: middle;
+    }
+    &::before{
+      transform: rotate(-35deg);
+    }
+    &::after{
+      transform: rotate(35deg);
+    }
+  }
+}
+.p-instagram__list {
+  margin-top: g.rem(24);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: g.rem(10);
+  @include g.mq("lg") {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:g.rem(16);
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+  }
+}
+.p-instagram__item {
+  @include g.mq('lg'){
+    white-space:nowrap;
+    width:231px;
+  }
+}
+.p-instagram__id {
+  margin-top: g.rem(8);
+  text-align: center;
+}
+.p-instagram__link {
+}
+.p-instagram__button {
+  margin-top: g.rem(24);
+  text-align: center;
+}
+.p-instagra__button-link {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  max-width: g.rem(300);
+  border: 1px solid g.$font-color;
+  font-weight: bold;
+  padding: g.rem(16) 0;
+  letter-spacing: 0.03em;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: g.rem(15);
+    transform: translate(0, -50%);
+    background: url(../images/link_more.svg) center center/cover;
+    width: g.rem(19);
+    height: g.rem(19);
+  }
+  &:hover{
+    color: #fff;
+    background-color: g.$font-color;
+    &::before{
+    background: url(../images/link_more_white.svg) center center/cover;
+    }
+  }
+}

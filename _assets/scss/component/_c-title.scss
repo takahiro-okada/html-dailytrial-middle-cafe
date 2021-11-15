@@ -1,0 +1,45 @@
+@use '../global/' as g;
+
+.c-util-title {
+  font-family: g.$font-en;
+  font-size: g.rem(32);
+  line-height: 1;
+  letter-spacing: .06em;
+  position: relative;
+  @include g.mq('lg'){
+    font-size: g.rem(48);
+  }
+  &::before{
+    content: '';
+    display: inline-block;
+    width: g.rem(50);
+    height: 1px;
+    background-color: g.$primary-color;
+    position: absolute;
+    bottom: g.rem(-16);
+    left: 50%;
+    transform: translate(-50%,0);
+    @include g.mq('lg'){
+      bottom:g.rem(-26);
+    }
+    }
+}
+.c-util-title__desc {
+  font-size: g.rem(14);
+  font-weight: bold;
+  color: g.$primary-color;
+  margin-bottom: g.rem(12);
+  display: inline-block;
+  @include g.mq('lg'){
+    font-size: g.rem(18);
+  }
+}
+.c-util-title.-white{
+  color:#fff;
+}
+.c-util-title__desc.-white{
+  color:#fff;
+}
+.c-util-title__wrap {
+  text-align: center;
+}

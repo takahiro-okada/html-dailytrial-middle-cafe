@@ -1,0 +1,48 @@
+@use '../global/' as g;
+
+.p-contact{
+  margin-top: g.rem(64);
+  background: url(../images/index-contact.jpg) no-repeat center center/cover;
+  padding: g.rem(64) 0;
+  @include g.mq('lg'){
+    padding: g.rem(130) 0;
+    margin-top: g.rem(120);
+  }
+}
+.p-contact__inner{
+
+}
+.p-contact__desc{
+  margin-top: g.rem(62);
+  text-align: center;
+  letter-spacing: .03em;
+  padding: 0 g.rem(15);
+  text-align: left;
+  @include g.mq('lg'){
+    margin-top: g.rem(52);
+    text-align: center;
+  }
+}
+.p-contact__body{
+  width: 90%;
+  margin: g.rem(30) auto 0;
+  @include g.mq('lg'){
+    margin: g.rem(48) auto 0;
+    width: 65%;
+  }
+}
+.p-contact__content{
+  width: 100%;
+  margin:auto;
+  background-color: #F2F2F2;
+  padding: g.rem(62) 0 g.rem(72);
+  @include g.mq('lg'){
+    max-width: g.rem(800);
+  }
+}
+.p-contact__message{
+  display: none;
+  &.-error{
+    color: red;
+  }
+}

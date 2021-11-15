@@ -1,0 +1,63 @@
+@use '../global/' as g;
+
+.l-header {
+  background-color: g.$body-color;
+  height: g.rem(60);
+  @include g.mq("lg") {
+    height: g.rem(90);
+  }
+}
+.l-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: inherit;
+  max-width: 100%;
+  padding: 0 g.rem(16);
+  @include g.mq("lg") {
+    width: g.rem(1400);
+    margin: 0 auto;
+  }
+}
+.l-header__logo {
+  width: g.rem(50);
+  @include g.mq("lg") {
+    width: g.rem(122);
+  }
+}
+.l-header__nav {
+  @include g.mq("lg") {
+    margin-right: g.rem(20);
+  }
+}
+.l-header__list {
+  display: flex;
+}
+.l-header__link {
+  color: #fff;
+  font-family: g.$font-en;
+  font-size: g.rem(14);
+  letter-spacing: 0.03em;
+  padding: g.rem(10);
+  position: relative;
+  @include g.mq("lg") {
+    font-size: g.rem(18);
+    padding: g.rem(20);
+  }
+  &:hover {
+    text-decoration: underline;
+    text-decoration-thickness:2px;
+    text-underline-offset: g.rem(3);
+    text-decoration-color: g.$primary-color;
+  }
+}
+.l-inner {
+  width: 100%;
+  padding: 0 g.rem(16);
+  @include g.mq("lg") {
+    width: g.rem(1080);
+    padding: 0;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,20 @@
+@use '../global/' as g;
+
+.bold{
+  font-weight: bold;
+}
+.text--primary{
+  color:g.$primary-color;
+}
+.sp-hidden{
+  display: none;
+  @include g.mq('lg'){
+    display: block;
+  }
+}
+.pc-hidden{
+  display: block;
+  @include g.mq('lg'){
+    display: none;
+  }
+}
