@@ -1,0 +1,11 @@
+@use '../global/' as g;
+
+.p-feature-salada{
+  background: url(../img/index-feature1.png) no-repeat center center/cover fixed;
+  padding-top: 67%;
+  width: 100%;
+  @include g.mq('lg'){
+    padding-top: 31.2%;
+
+  }
+}
